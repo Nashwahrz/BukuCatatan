@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notesHeading"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="Notes App Kotlin"
+        android:layout_marginStart="18dp"
+        android:textColor="@color/blue"
+        android:textSize="24sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteRecyvleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/notesHeading"
+        android:layout_marginTop="10dp"
+        android:padding="10sp"
+        />
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/baseline_add1_24"
+        android:tint="@color/white"
+        android:backgroundTint="@color/blue"/>
+
+
+
+
+</RelativeLayout>
