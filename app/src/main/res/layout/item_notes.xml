@@ -5,26 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
+    android:elevation="2dp"
+    app:cardCornerRadius="10dp">
 
+    <!-- LinearLayout sebagai pembungkus utama -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="8dp">
 
-        <TextView
-            android:id="@+id/titleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="16sp"/>
+        <!-- RelativeLayout untuk mengatur title dan gambar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <!-- Title di sebelah kiri -->
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Title" />
+
+            <!-- Gambar di ujung kanan -->
+            <ImageView
+                android:id="@+id/updateButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="30dp"
+                app:srcCompat="@drawable/baseline_edit_24"
+                android:backgroundTint="@color/blue" />
+            <ImageView
+                android:id="@+id/deleteButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="70dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/baseline_delete_24"
+                android:backgroundTint="@color/blue" />
+        </RelativeLayout>
+
+        <!-- Konten di bawah RelativeLayout -->
         <TextView
             android:id="@+id/contentTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"/>
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="Content" />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
